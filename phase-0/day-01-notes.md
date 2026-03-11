@@ -23,3 +23,5 @@ What does Git actually do — in your own words, not copied.)
 1- I have learned and understood the pwd,cd,ls,mkdir etc functions in gitbash and also learn how to paste annthing in git bash
 
 2- installed vscode, extensions, python, git, made github account and cloned using git bash and url of account 
+
+3- learned f-string, str,int, bool, float. == & =.\
