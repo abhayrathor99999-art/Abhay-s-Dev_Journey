@@ -44,3 +44,12 @@ sell_item → None of these — it's just checking conditions and returning mess
 get_low_stock → C ✅
 
 6 and 7 are a new pattern — conditional update/check. Not every function fits A/B/C. Some functions just check a condition and return a result. That's fine.
+
+
+Logic Patterns
+
+Pattern A — Track Best
+Pattern B — Accumulate
+Pattern C — Collect
+Logic building process: understand → plain English → pseudocode → code → test
+Frequency counting pattern — building a dict inside a loop

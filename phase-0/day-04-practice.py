@@ -62,20 +62,20 @@
 # print("----------------------------------------------------------------------------------")
 
 
-products = [
-    {"name": "phone",    "price": 15000},
-    {"name": "laptop",   "price": 55000},
-    {"name": "cable",    "price": 199},
-    {"name": "charger",  "price": 499},
-    {"name": "earbuds",  "price": 2999}
-]
+# products = [
+#     {"name": "phone",    "price": 15000},
+#     {"name": "laptop",   "price": 55000},
+#     {"name": "cable",    "price": 199},
+#     {"name": "charger",  "price": 499},
+#     {"name": "earbuds",  "price": 2999}
+# ]
 
 
-def get_cheapest_product(products):
-    cheapest = products[0]
-    for product in products:
-        if product["price"] < cheapest["price"]:
-            cheapest = product
-    return cheapest
+# def get_cheapest_product(products):
+#     cheapest = products[0]
+#     for product in products:
+#         if product["price"] < cheapest["price"]:
+#             cheapest = product
+#     return cheapest
 
-print(get_cheapest_product(products))
+# print(get_cheapest_product(products))
