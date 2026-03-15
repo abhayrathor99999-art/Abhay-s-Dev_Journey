@@ -1,5 +1,6 @@
-#     circumference = 2 * 3.14 * radius
-#     stats = area, circumference
-#     return(stats)
+def list_password():
+    passwords = load_passwords("password.json")
+    for password in passwords:
+        print (f"Service: {password['service']} | User: {password['username']}")  
 
-# print(circle_stats(5))
+print(list_password())
