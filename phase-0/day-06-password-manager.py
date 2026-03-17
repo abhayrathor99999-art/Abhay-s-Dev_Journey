@@ -4,7 +4,7 @@
 
 # 1. load_passwords()
 import json
-def load_passwords(filename):
+def load_passwords(filename: str) -> list:
     try:
         with open(filename, "r") as f:
             content = json.load(f)
@@ -15,13 +15,13 @@ def load_passwords(filename):
             return []
 
 # 2. save_passwords(passwords)
-def save_passwords(passwords):
+def save_passwords(passwords: list) -> str:
     with open("passwords.json", "w") as f:
         json.dump(passwords, f, indent=4)
     return "saved"
 
 # 3. add_password(service, username, password)
-def add_password(service, username, password):
+def add_password(service: str, username: str, password: str) -> None:
     passwords = load_passwords("passwords.json") 
     new_entry = {"service": service, "username": username, "password": password}
     passwords.append(new_entry) 
@@ -29,13 +29,13 @@ def add_password(service, username, password):
     print("Saved.")
         
 # 4. list_passwords()
-def list_password():
+def list_password() -> None:
     passwords = load_passwords("passwords.json")
     for password in passwords:
         print((f"Service: {password['service']} | User: {password['username']}") )
 
 # 5. search_password(service)
-def search_password(service):
+def search_password(service: str) -> dict | None:
     passwords = load_passwords("passwords.json")
     found = False
     for password in passwords:
@@ -47,9 +47,10 @@ def search_password(service):
 
 
 
-add_password("gmail", "abhay@gmail.com", "pass123")
-add_password("github", "abhayrathor", "ghpass456")
-add_password("netflix", "abhay@gmail.com", "nfpass789")
-list_password()
+# add_password("gmail", "abhay@gmail.com", "pass123")
+# add_password("github", "abhayrathor", "ghpass456")
+# add_password("netflix", "abhay@gmail.com", "nfpass789")
+# list_password()
 search_password("gmail")
-search_password("twitter")
+# search_password("twitter")
+search_password("ygfcdygc")
