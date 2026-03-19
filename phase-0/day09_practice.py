@@ -12,12 +12,21 @@
 # Cat1.describe()
 # Cat2.describe()
 
-class PasswordManager:
-    def __init__(self, filename: str) -> None:
-        self.filename = filename
+# class PasswordManager:
+#     def __init__(self, filename: str) -> None:
+#         self.filename = filename
     
-    def greet(self) -> None:
-        print(f'Password Manager ready. Using file: {self.filename}')
+#     def greet(self) -> None:
+#         print(f'Password Manager ready. Using file: {self.filename}')
 
-PasswordManager1 = PasswordManager("Password.json")
-PasswordManager1.greet()
+# PasswordManager1 = PasswordManager("Password.json")
+# PasswordManager1.greet()
+
+
+# class Dog:
+#     def __init__(self, name: str, breed: str) -> None:
+#         self.name = name
+#         self.breed = breed
+
+
+
