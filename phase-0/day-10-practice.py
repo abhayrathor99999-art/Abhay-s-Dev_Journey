@@ -38,14 +38,14 @@
 
 # INHERITANCE AND DUNDER AND PROPERTY - __str__
 
-class Animal:
-    def __init__(self, name: str, color: str, toys: list) -> None:
-        self.name = name
-        self.color = color
-        self.toys = toys
+# class Animal:
+#     def __init__(self, name: str, color: str, toys: list) -> None:
+#         self.name = name
+#         self.color = color
+#         self.toys = toys
 
-    def describe(self) -> None:
-        print(f'Hello I am {self.name} and my Color is {self.color}')
+#     def describe(self) -> None:
+#         print(f'Hello I am {self.name} and my Color is {self.color}')
 
 # class Cat(Animal):
 #     @property
@@ -110,12 +110,55 @@ class Animal:
 
 # greet()
 
-def count_up():
-    yield 1
-    yield 2
-    yield 3
+# def count_up():
+#     yield 1
+#     yield 2
+#     yield 3
 
-gen = count_up()
-print(next(gen))
-print(next(gen))
-print(next(gen))
+# gen = count_up()
+# print(next(gen))
+# print(next(gen))
+# print(next(gen))
+
+
+
+class Animal:
+    def __init__(self, name: str, color: str) -> None:
+        self.name = name
+        self.color = color
+        
+    def describe(self) -> None:
+        print(f"Hello I am {self.name} and my color is {self.color}")
+
+# class Cat(Animal):
+#     def meow(self) -> None:
+#         super().describe()
+#         print(f"{self.name} says meow!")
+# class Cat(Animal):
+#     def describe(self) -> None:
+#         super().describe() # runs Animal's describe first
+#         print("I also purr!") # then adds Cat's own line
+
+
+# cat1 = Cat("Kito", "white")
+# cat1.describe() 
+
+# class Cat(Animal):
+#     def __str__(self) -> str:
+#         return f"{self.name} is a {self.color} cat"
+#     def __repr__(self) -> str:
+#         return f"Cat(name='{self.name}', color='{self.color}')"
+
+# cat1 = Cat("Kito", "white")
+# print(cat1) 
+# print(repr(cat1)) 
+
+class Cat(Animal):
+    def __init__(self, name: str, color: str, toys: list) -> None:
+        super().__init__(name, color) 
+        self.toys = toys
+    def __len__(self) -> int:
+        return len(self.toys)
+
+cat1 = Cat("Kito", "white", ["ball", "string", "mouse"])
+print(len(cat1))
